@@ -1,10 +1,30 @@
-/* inactive divs */ 
-div.hidden {
-  display: none;
+
+
+/* active button */ 
+button.active {
+  background: black;
+  color: white;
+}
+button {
+  font-size: 2em;
 }
 
+h1 {
+  font-size: 5em;
+}
+
+/* inactive divs */ 
+div.inactive {
+  display: none;
+}
+/* active divs */
 div.active {
-  border: 5px solid red;
+  display: block;
+  border: 5px solid lightskyblue; /* go heels */
+}
+
+ul li{
+  display: inline;
 }
 
 nav :hover {

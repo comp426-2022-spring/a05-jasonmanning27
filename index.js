@@ -128,11 +128,7 @@ app.post('/app/flip/call/', (req, res, next) => {
 // Flip a coin endpoint
 app.get('/app/flip/', (req, res, next) => {
     const result = coinFlip();
-    if(result == "heads") {
-        res.status(200).json({"flip":"heads"});
-    } else {
-        res.status(200).json({"flip":"tails"});
-    }
+    res.status(200).json({ "flip" : flip })
   });
 
 
