@@ -109,7 +109,7 @@ app.get('/app/', (req, res) => {
         res.end(res.statusCode+ ' ' +res.statusMessage)
 });
 
-// modified endpoints from assignment page
+// modified endpoints from assignment page a5
 
 // flip multiple coins
 app.post('/app/flip/coins/', (req, res, next) => {
@@ -139,6 +139,7 @@ app.get('/app/flip/', (req, res, next) => {
 // OLD ENDPOINTS FROM A03/A04
 
 // Flip a coin endpoint
+/*
 app.get('/app/flip/', (req, res) => {
   res.statusCode = 200;
   res.statusMessage = 'OK';
@@ -149,12 +150,16 @@ app.get('/app/flip/', (req, res) => {
       res.json({"flip":"tails"});
   }
 });
+*/
 // Flip multiple coins
+/*
 app.get('/app/flips/:number', (req, res) => {
   const flips = coinFlips(req.params.number);
   res.status(200).json({"raw": flips, "summary" : countFlips(flips)})
 });
+*/
 // Guess Heads
+/*
 app.get('/app/flip/call/heads', (req, res) => {
   res.statusCode = 200;
   res.statusMessage = 'OK';
@@ -168,7 +173,7 @@ app.get('/app/flip/call/tails', (req, res) => {
   const result = flipACoin('tails');
   res.json(result);
 });
-
+*/
 // Default response for any other request
 app.use(function(req, res) {
   res.status(404).send('404 NOT FOUND')

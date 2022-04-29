@@ -1,3 +1,4 @@
+/* inactive divs */ 
 div.hidden {
   display: none;
 }
@@ -16,4 +17,8 @@ img.bigcoin {
 
 img.smallcoin {
   width: 50px;
+}
+
+img#callcoin {
+  opacity: 0.5;
 }
