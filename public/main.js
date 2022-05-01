@@ -132,6 +132,7 @@ function homeNav() {
   document.getElementById("guessnav").className = "";
   document.getElementById("guesscoin").className = "inactive";
 }
+// singleNav
 function singleNav() {
   document.getElementById("homenav").className = "";
   document.getElementById("home").className = "inactive";
@@ -142,6 +143,7 @@ function singleNav() {
   document.getElementById("guessnav").className = "";
   document.getElementById("guesscoin").className = "inactive";
 }
+// multiNav
 function multiNav() {
   document.getElementById("homenav").className = "";
   document.getElementById("home").className = "inactive";
@@ -152,6 +154,7 @@ function multiNav() {
   document.getElementById("guessnav").className = "";
   document.getElementById("guesscoin").className = "inactive";
 }
+// guessNav
 function guessNav() {
   document.getElementById("homenav").className = "";
   document.getElementById("home").className = "inactive";
@@ -162,9 +165,12 @@ function guessNav() {
   document.getElementById("guessnav").className = "active";
   document.getElementById("guesscoin").className = "active";
 } 
+
 // Make a list of coin images
 // This function takes an array of coin flip results and turns them into list elements with corresponding images.
 // This allows the DOM call above to put the list in the appropriate place and show a coin for each of the flips sent back from the server.
+
+
 function coinList(array) {
   let text = "";
   let arrayLength = array.length

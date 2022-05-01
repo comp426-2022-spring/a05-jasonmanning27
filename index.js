@@ -111,6 +111,13 @@ app.get('/app/', (req, res) => {
 
 // modified endpoints from assignment page a5
 
+
+// Flip a coin endpoint
+app.get('/app/flip/', (req, res, next) => {
+    const result = coinFlip();
+    res.status(200).json({ "flip" : flip })
+});
+
 // flip multiple coins
 app.post('/app/flip/coins/', (req, res, next) => {
     const flips = coinFlips(req.body.number)
@@ -124,13 +131,16 @@ app.post('/app/flip/call/', (req, res, next) => {
 })
 
 // modify other endpoints to match
+app.get('/app/flips/:number', (req, res, next) => {
+    const flips = coinFlips(req.params.number)
+    const count = countFlips(flips)
+    res.status(200).json({"raw":flips,"summary":count})
+});
 
-// Flip a coin endpoint
-app.get('/app/flip/', (req, res, next) => {
-    const result = coinFlip();
-    res.status(200).json({ "flip" : flip })
-  });
-
+app.get('/app/flip/call/:guess(heads|tails)/', (req, res, next) => {
+    const game = flipACoin(req.params.guess)
+    res.status(200).json(game)
+})
 
 // OLD ENDPOINTS FROM A03/A04
 
