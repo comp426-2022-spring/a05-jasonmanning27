@@ -1,15 +1,42 @@
-div.hidden {
+/* active button */ 
+button.active {
+  background: black;
+  color: white;
+}
+/* button */ 
+button {
+  font-size: 2em;
+}
+/* h1 */ 
+h1 {
+  font-size: 5em;
+}
+
+/* inactive divs */ 
+div.inactive {
   display: none;
 }
-
+/* active divs */
 div.active {
-  border: 5px solid red;
+  display: block;
+  border: 5px solid lightskyblue; /* go heels */
+}
+/* unordered list elements */ 
+ul li{
+  display: inline;
+}
+/* hover for navigation elements */ 
+nav :hover {
+  background-color: lightblue;
 }
 
+/* images */ 
 img.bigcoin {
   width: 50px;
 }
-
 img.smallcoin {
   width: 50px;
+}
+img#callcoin {
+  opacity: 0.5;
 }
